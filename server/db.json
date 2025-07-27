@@ -1,0 +1,92 @@
+{
+  "carts": [],
+  "addresses": [
+    {
+      "id": "84ee",
+      "name": "pravesh",
+      "uid": "Jo5g7sfK5DNeE3OYqqShARDrw652",
+      "phone": "8009988120",
+      "address": "1234 Main Street 2, Near Park , ub college",
+      "pin": "394305",
+      "district": "Surat",
+      "state": "Gujarat"
+    }
+  ],
+  "orders": [
+    {
+      "id": "85fc",
+      "uid": "Jo5g7sfK5DNeE3OYqqShARDrw652",
+      "cartItems": [
+        {
+          "productId": 94,
+          "title": "Longines Master Collection",
+          "image": "https://cdn.dummyjson.com/product-images/mens-watches/longines-master-collection/1.webp",
+          "quantity": 2,
+          "price": 119999.2,
+          "category": "mens-watches",
+          "warranty": "1 week warranty"
+        }
+      ],
+      "totalAmount": 239998.4,
+      "paymentMethod": "razorpay",
+      "deliveryAddress": {
+        "id": "84ee",
+        "name": "pravesh",
+        "uid": "Jo5g7sfK5DNeE3OYqqShARDrw652",
+        "phone": "8009988120",
+        "address": "1234 Main Street, Near Park , ub college",
+        "pin": "394305",
+        "district": "Surat",
+        "state": "Gujarat"
+      },
+      "orderDate": "13 July 2025, 02:33 PM",
+      "razorpayPaymentId": "pay_QsUnCmv6bop1Gq"
+    },
+    {
+      "id": "06d3",
+      "uid": "Jo5g7sfK5DNeE3OYqqShARDrw652",
+      "cartItems": [
+        {
+          "productId": 3,
+          "title": "Powder Canister",
+          "image": "https://cdn.dummyjson.com/product-images/beauty/powder-canister/1.webp",
+          "quantity": 1,
+          "price": 1199.2,
+          "category": "beauty",
+          "warranty": "3 months warranty"
+        },
+        {
+          "productId": 4,
+          "title": "Red Lipstick",
+          "image": "https://cdn.dummyjson.com/product-images/beauty/red-lipstick/1.webp",
+          "quantity": 1,
+          "price": 1039.2,
+          "category": "beauty",
+          "warranty": "3 year warranty"
+        },
+        {
+          "productId": 94,
+          "title": "Longines Master Collection",
+          "image": "https://cdn.dummyjson.com/product-images/mens-watches/longines-master-collection/1.webp",
+          "quantity": 1,
+          "price": 119999.2,
+          "category": "mens-watches",
+          "warranty": "1 week warranty"
+        }
+      ],
+      "totalAmount": 122237.59999999999,
+      "paymentMethod": "cod",
+      "deliveryAddress": {
+        "id": "84ee",
+        "name": "pravesh",
+        "uid": "Jo5g7sfK5DNeE3OYqqShARDrw652",
+        "phone": "8009988120",
+        "address": "1234 Main Street, Near Park , ub college",
+        "pin": "394305",
+        "district": "Surat",
+        "state": "Gujarat"
+      },
+      "orderDate": "13 July 2025, 04:30 PM"
+    }
+  ]
+}
