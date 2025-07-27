@@ -7,8 +7,5 @@
   },
   "dependencies": {
     "json-server": "^0.17.0"
-  },
-  "devDependencies": {
-    "node": "^2.0.22"
   }
 }
