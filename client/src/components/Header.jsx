@@ -24,6 +24,7 @@ import {
   DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
 import { AuthContext } from "@/context/authContext";
+import shopsphere from "../assets/shopsphere.png";
 
 export default function Header({ cartCount = 0 }) {
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
@@ -49,12 +50,11 @@ export default function Header({ cartCount = 0 }) {
   return (
     <header className="w-full bg-white shadow-md sticky top-0 z-50 bg-gradient-to-r from-indigo-50 via-white to-pink-50">
       <div className="container mx-auto flex items-center justify-between px-4 md:px-20 py-4">
-        {/* Left: Logo */}
         <Link
-          to="/"
-          className="text-xl md:text-3xl font-bold text-indigo-700 tracking-wide flex-shrink-0"
-        >
-          ShopBrand
+          to="/" >
+          <div className="text-sm bg-none object-cover">
+            <img src={shopsphere} alt="" className="md:h-12 md:w-full h-8 w-full object-cover" />
+          </div>
         </Link>
 
         {/* Center: Search (Desktop & Tablet) */}

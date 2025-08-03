@@ -18,7 +18,7 @@ import { Loader, Loader2 } from "lucide-react";
 
 function Login() {
   const { login } = useContext(AuthContext);
-  const [input, setInput] = useState({ email: "", password: "" });
+  const [input, setInput] = useState({ email: "test@gmail.com", password: "123456" });
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
@@ -41,77 +41,167 @@ function Login() {
         navigate("/");
         setInput({ email: "", password: "" });
       } catch (error) {
-        toast.error("invalid email or password" );
+        toast.error("invalid email or password");
       } finally {
         setLoading(false);
       }
     }
   };
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-indigo-50 via-white to-pink-50 dark:from-gray-900 dark:to-gray-800 px-4">
-      <Card className="w-full max-w-md shadow-xl">
-        <CardHeader>
-          <CardTitle className="text-2xl text-center font-bold">
-            Welcome Back
-          </CardTitle>
-          <CardDescription className="text-center">
-            Sign in to continue shopping smart 🛍️
-          </CardDescription>
-        </CardHeader>
+    // <div className="min-h-screen flex  justify-center bg-gradient-to-br from-indigo-50 via-white to-pink-50">
+    //   <div className="flex justify-center h-max mt-24  dark:from-gray-900 dark:to-gray-800 px-4">
+    //     <Card className="w-full max-w-md shadow-xl">
+    //       <CardHeader>
+    //         <CardTitle className="text-2xl text-center font-bold">
+    //           Welcome Back
+    //         </CardTitle>
+    //         <CardDescription className="text-center">
+    //           Sign in to continue shopping smart 🛍️
+    //         </CardDescription>
+    //         <div className="bg-blue-50 dark:bg-blue-950 border border-blue-200 dark:border-blue-800 text-blue-800 dark:text-blue-100 rounded-md px-4 py-3 mt-4 text-sm text-center leading-relaxed">
+    //           <strong>Demo Login Enabled</strong><br />
+    //           Use the pre-filled credentials below to log in and test the app.<br />
+    //           You can access all core features — cart, checkout, orders, address management — freely.
+    //           <br />
+    //           <span className="text-xs text-gray-600 dark:text-gray-400 block mt-1">
+    //             (No personal data is stored)
+    //           </span>
+    //         </div>
+    //       </CardHeader>
 
-        <CardContent className="space-y-4">
-          <div className="space-y-2">
-            <Label htmlFor="email">Email</Label>
-            <Input
-              id="email"
-              type="email"
-              name="email"
-              placeholder="you@example.com"
-              onChange={handleChange}
-              value={input.email}
-            />
-          </div>
+    //       <CardContent className="space-y-4">
+    //         <div className="space-y-2">
+    //           <Label htmlFor="email">Email</Label>
+    //           <Input
+    //             id="email"
+    //             type="email"
+    //             name="email"
+    //             placeholder="you@example.com"
+    //             onChange={handleChange}
+    //             value={input.email}
+    //           />
+    //         </div>
 
-          <div className="space-y-2">
-            <Label htmlFor="password">Password</Label>
-            <Input
-              id="password"
-              type="password"
-              name="password"
-              placeholder="••••••••"
-              onChange={handleChange}
-              value={input.password}
-            />
-          </div>
+    //         <div className="space-y-2">
+    //           <Label htmlFor="password">Password</Label>
+    //           <Input
+    //             id="password"
+    //             type="password"
+    //             name="password"
+    //             placeholder="••••••••"
+    //             onChange={handleChange}
+    //             value={input.password}
+    //           />
+    //         </div>
 
-          <Button
-            className="w-full bg-primary text-white hover:bg-primary/90 transition"
-            onClick={handleSubmit}
-            disabled={loading}
+    //         <Button
+    //           className="w-full bg-primary text-white hover:bg-primary/90 transition"
+    //           onClick={handleSubmit}
+    //           disabled={loading}
+    //         >
+    //           {loading ? (
+    //             <Loader2 className="animate-spin w-4 h-4 mr-2" />
+    //           ) : (
+    //             "Login"
+    //           )}
+    //         </Button>
+
+    //         <p className="text-sm text-center text-gray-500 dark:text-gray-400">
+    //           Don’t have an account?{" "}
+    //           <Link
+    //             to="/register"
+    //             className="text-primary font-medium hover:underline"
+    //           >
+    //             Sign Up
+    //           </Link>
+    //         </p>
+    //       </CardContent>
+
+    //       <CardFooter className="flex justify-center">
+    //         <Separator className="w-1/4" />
+    //       </CardFooter>
+    //     </Card>
+    //   </div>
+    // </div>
+    <div className="min-h-screen flex justify-center bg-gradient-to-br from-indigo-50 via-white to-pink-50 dark:from-gray-900 dark:to-gray-800 px-4">
+  <div className="w-full max-w-xl mt-24 px-4">
+    <Card className="w-full shadow-xl">
+      <CardHeader>
+        <CardTitle className="text-3xl text-center font-bold">
+          Welcome Back
+        </CardTitle>
+        <CardDescription className="text-center text-base">
+          Sign in to continue shopping smart 🛍️
+        </CardDescription>
+
+        <div className="bg-blue-50 dark:bg-blue-950 border border-blue-200 dark:border-blue-800 text-blue-800 dark:text-blue-100 rounded-md px-6 py-4 mt-6 text-sm text-center leading-relaxed">
+          <strong>Demo Login Enabled</strong>
+          <br />
+          Use the pre-filled credentials below to log in and test the app.
+          <br />
+          Access all core features — cart, checkout, orders, address management — freely.
+          <br />
+          <span className="text-xs text-gray-600 dark:text-gray-400 block mt-2">
+            (No personal data is stored)
+          </span>
+        </div>
+      </CardHeader>
+
+      <CardContent className="space-y-6 px-6">
+        <div className="space-y-2">
+          <Label htmlFor="email">Email</Label>
+          <Input
+            id="email"
+            type="email"
+            name="email"
+            placeholder="you@example.com"
+            onChange={handleChange}
+            value={input.email}
+          />
+        </div>
+
+        <div className="space-y-2">
+          <Label htmlFor="password">Password</Label>
+          <Input
+            id="password"
+            type="password"
+            name="password"
+            placeholder="••••••••"
+            onChange={handleChange}
+            value={input.password}
+          />
+        </div>
+
+        <Button
+          className="w-full bg-primary text-white hover:bg-primary/90 transition"
+          onClick={handleSubmit}
+          disabled={loading}
+        >
+          {loading ? (
+            <Loader2 className="animate-spin w-4 h-4 mr-2" />
+          ) : (
+            "Login"
+          )}
+        </Button>
+
+        <p className="text-sm text-center text-gray-500 dark:text-gray-400">
+          Don’t have an account?{" "}
+          <Link
+            to="/register"
+            className="text-primary font-medium hover:underline"
           >
-            {loading ? (
-              <Loader2 className="animate-spin w-4 h-4 mr-2" />
-            ) : (
-              "Login"
-            )}
-          </Button>
+            Sign Up
+          </Link>
+        </p>
+      </CardContent>
 
-          <p className="text-sm text-center text-gray-500 dark:text-gray-400">
-            Don’t have an account?{" "}
-            <Link
-              to="/register"
-              className="text-primary font-medium hover:underline"
-            >
-              Sign Up
-            </Link>
-          </p>
-        </CardContent>
+      <CardFooter className="flex justify-center">
+        <Separator className="w-1/4" />
+      </CardFooter>
+    </Card>
+  </div>
+</div>
 
-        <CardFooter className="flex justify-center">
-          <Separator className="w-1/4" />
-        </CardFooter>
-      </Card>
-    </div>
   );
 }
 

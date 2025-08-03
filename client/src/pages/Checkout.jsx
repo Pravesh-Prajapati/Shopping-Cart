@@ -110,14 +110,15 @@ export default function Checkout() {
         if (/^\d{6}$/.test(value)) {
           try {
             const res = await axios.get(
-              `https://pinlookup.in/api/pincode?pincode=${value}`
+              `https://api.postalpincode.in/pincode/${value}`
             );
-            const data = res?.data?.data;
+            const data = res?.data?.[0]?.PostOffice?.[0];
+            console.log(data);
             if (data) {
               setcustomerAddress((prev) => ({
                 ...prev,
-                district: data.district_name,
-                state: data.state_name,
+                district:data.District,
+                state: data.State,
               }));
             } else {
               setcustomerAddress((prev) => ({

@@ -1,12 +1,19 @@
 {
-  "carts": [],
+  "carts": [
+    {
+      "uid": "Jo5g7sfK5DNeE3OYqqShARDrw652",
+      "productId": 84,
+      "quantity": 1,
+      "id": 1
+    }
+  ],
   "addresses": [
     {
       "id": "84ee",
       "name": "pravesh",
       "uid": "Jo5g7sfK5DNeE3OYqqShARDrw652",
       "phone": "8009988120",
-      "address": "1234 Main Street 2, Near Park , ub college",
+      "address": "1234 Main Street 1, Near Park , ub college",
       "pin": "394305",
       "district": "Surat",
       "state": "Gujarat"

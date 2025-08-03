@@ -1,5 +1,5 @@
-const BASE_URL = "http://localhost:4000";
-// const BASE_URL = "http://192.168.201.196:4000";
+// const BASE_URL = "http://localhost:4000";
+const BASE_URL = import.meta.env.VITE_API_BASE_URL;
 const JSON_URL = "https://dummyjson.com";
 
 export const API = {
